@@ -50,9 +50,10 @@ const map = {
 
 function numeralsToRoman (input) {
     // Looping para fazer a limpeza de caracteres que não sejam os aceitos pelo software
+    const value = input.toString();
     var context = '';
-    for (var i = 0; i <= input.length; i++)
-        context += input.charAt(i).replace(/[^0-9]/, '');
+    for (var i = 0; i <= value.length; i++)
+        context += value.charAt(i).replace(/[^0-9]/, '');
 
     if (context == '') 
         return "É necessário informar algum número válido";
@@ -62,7 +63,7 @@ function numeralsToRoman (input) {
     
     // Looping para fazer a busca pelo número correspondente em romano 
     var result = '';    
-    for (var i = context.length; i >= 1 ;i--) {
+    for (var i = context.length; i >= 1 ; i--) {
         var j = context.length - i;
         var auxVar = parseInt(context.charAt(j));
         result += map[i][auxVar];

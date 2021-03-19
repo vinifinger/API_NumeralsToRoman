@@ -2,10 +2,13 @@ const { numeralsToRoman } = require("../utils/ConvertNumeralsToRoman")
 
 
 module.exports = class RomanController {
-    async ToNumerals(req, res) {
+    async ToRoman(req, res) {
         const { numerals } = req.body; 
-        const result = numeralsToRoman(numerals);
-
-        return res.status(200).json({ Roman: result});
+        try {
+            const result = numeralsToRoman(numerals);
+            return res.status(200).json({ Roman: result});
+        } catch (error) {
+            return res.status(400).json({ Error: error});
+        }
     }
 }

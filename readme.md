@@ -6,15 +6,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 -  [Mocha](https://www.npmjs.com/package/mocha)
 -  [Chai](https://www.chaijs.com)
 -  [Request](https://www.npmjs.com/package/request)
--  [express](https://www.npmjs.com/package/express)
--  [nodemon](https://www.npmjs.com/package/nodemon)
+-  [Express](https://www.npmjs.com/package/express)
+-  [Nodemon](https://www.npmjs.com/package/nodemon)
+-  [Celebrate](https://www.npmjs.com/package/celebrate)
 
 ## :dart: Como foi resolvido o problema
 
 O problema foi resolvido utilizando um objeto com os números romanos correspondentes aos grupos de unidade, dezena, centena e milhar. Onde em um looping, o número informado era divido e analisado caractere por caractere junto com seu tamanho para fazer a busca no grupo numérico correto, retornando o número em romano certo.
 
 O número máximo para a conversão é de '3999'.
-Foram implementados um total de 15 testes, que ocorrem de forma crescente para simular o algoritmo desde os números menores até números e entradas não aceitas.
+Foram implementados um total de 8 testes, que ocorrem de forma crescente para simular o algoritmo desde os números menores até números e entradas não aceitas.
  
 ## :information_source: Como usar
 
@@ -25,7 +26,7 @@ Para utilizar o conversor, é só rodar as linhas abaixo e testar utilizando a u
 O Endpoint é método `POST`, esperando um corpo simples como o abaixo: 
 ```JSON
 {
-    "numerals": "50"
+    "numerals": 50
 }
 ```
 
