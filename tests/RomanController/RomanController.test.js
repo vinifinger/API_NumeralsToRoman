@@ -1,4 +1,3 @@
-//var should = require('should');
 var request = require('request');
 var { expect } = require('chai');
 var urlBase = 'http://localhost:3333';    
